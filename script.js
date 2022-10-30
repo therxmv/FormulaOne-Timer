@@ -1,7 +1,7 @@
 //--API--//
 class F1Service {
     getInfo = async () => {
-        const res = await fetch(`http://ergast.com/api/f1/2022.json`, {method: 'GET', redirect: 'follow'});
+        const res = await fetch(`http://ergast.com/api/f1/${new Date().getFullYear()}.json`, {method: 'GET', redirect: 'follow'});
         return await res.json();
     }
 
